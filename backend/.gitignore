@@ -1,0 +1,30 @@
+# ── Maven build output ────────────────────────────────────────────────────────
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ── IDE files ─────────────────────────────────────────────────────────────────
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.classpath
+.project
+.settings/
+*.launch
+
+# ── Local development secrets (NEVER commit these) ───────────────────────────
+application-local.properties
+.env
+.env.local
+*.env
+
+# ── OS artefacts ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Log files ─────────────────────────────────────────────────────────────────
+*.log
+logs/

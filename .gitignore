@@ -1,0 +1,36 @@
+﻿node_modules/
+dist/
+build/
+.cache/
+.env*
+.vite/
+vite.config.*.timestamp-*
+*.tsbuildinfo
+*-debug.log*
+logs/
+*.log
+.claude-replay.*
+.tmp-*
+/.figma/design-context/
+/.plugins/
+/.opencode-skills/
+
+# Keep safe example environment files
+!**/.env.example
+!**/application-local.properties.example
+
+# Local backend configuration and generated output
+/backend/application-local.properties
+/backend/.env
+/backend/.env.local
+/backend/target/
+/backend/startup-error.txt
+
+# Browser test artifacts
+/test-results/
+/playwright-report/
+
+# Local agent and design-tool instructions
+/AGENTS.md
+/CLAUDE.md
+/.figma/

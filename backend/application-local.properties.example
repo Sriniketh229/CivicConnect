@@ -1,0 +1,36 @@
+# =============================================================================
+# CivicConnect Backend — Local Development Configuration Template
+# =============================================================================
+# 1. Copy this file:   cp application-local.properties.example application-local.properties
+# 2. Fill in your real Supabase credentials below.
+# 3. Run the app with: mvn spring-boot:run -Dspring-boot.run.profiles=local
+#
+# application-local.properties is listed in .gitignore — it will NEVER be
+# committed to source control.
+# =============================================================================
+
+# ── Supabase PostgreSQL ───────────────────────────────────────────────────────
+# Supabase Dashboard → Project Settings → Database → Connection string (URI)
+spring.datasource.url=jdbc:postgresql://<YOUR_DB_HOST>:5432/postgres?sslmode=require
+spring.datasource.username=postgres
+spring.datasource.password=<YOUR_DB_PASSWORD>
+
+# ── Supabase Storage ──────────────────────────────────────────────────────────
+# Supabase Dashboard → Project Settings → API
+supabase.project-url=https://<YOUR_PROJECT_ID>.supabase.co
+supabase.service-role-key=<YOUR_SERVICE_ROLE_KEY>
+# Create this private bucket once in Supabase Storage (or set this to an existing private bucket).
+supabase.storage.bucket=complaint-attachments
+
+# ── JWT ───────────────────────────────────────────────────────────────────────
+# Minimum 256-bit random string. Generate with: openssl rand -hex 32
+app.jwt.secret=<YOUR_JWT_SECRET>
+app.jwt.expiration-ms=86400000
+
+# ── CORS ──────────────────────────────────────────────────────────────────────
+app.cors.allowed-origins=http://localhost:5173,http://localhost:8443
+
+# ── Developer-friendly logging (local only) ───────────────────────────────────
+spring.jpa.show-sql=true
+logging.level.com.civicconnect=DEBUG
+logging.level.org.flywaydb=DEBUG
